@@ -1,0 +1,11 @@
+name: DeathRain
+version: 0.0.1
+main: me.callahandevelopment.deathrain.DeathRain
+api-version: 1.18
+authors: [ Callahan ]
+description: Simple deathrain plugin
+website: https://github.com/Call4han
+commands:
+  Deathrain:
+    description: Command Main Deathrain
+

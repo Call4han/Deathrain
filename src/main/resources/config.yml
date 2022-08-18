@@ -1,0 +1,24 @@
+#thanks for downloading my plugin
+#is my first plugin I say it as data:)
+#github: Call4han
+#
+#--------->
+storm-message: true
+storm-message-start: '&4&lThis is the beginning of the eternal suffering of &4%player% &4&lAh been permaban'
+message-of-bar: '&7Time remaining %timer%'
+time-more-death-player: 1000 #inticks 20 ticks = 1 second
+storm-base-initial: 12000 #ticks
+ban-on-death: false
+message-ban: '&4&lPermadeath'
+title-on-death: true
+title-on-death-message: '&4&lYou are Permadeath'
+worlds:
+  - 'world3'
+  - 'world2'
+  - 'world'
+#<---------#
+#coming soon
+#ignored-players:
+#  - 'callahan'
+#  - 'BrownWukong'
+#  - 'Morp'
