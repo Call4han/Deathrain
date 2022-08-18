@@ -6,9 +6,10 @@ import org.bukkit.plugin.java.JavaPlugin;
 
 public final class DeathRain extends JavaPlugin {
     public static DeathRain plugin;
+
     @Override
     public void onEnable() {
-        getServer().getPluginManager().registerEvents(new ThunderListener(this),this);
+        getServer().getPluginManager().registerEvents(new ThunderListener(this), this);
         this.getCommand("Deathrain").setExecutor(new commandsdr());
         plugin = this;
         getConfig().options().copyDefaults();
@@ -16,7 +17,7 @@ public final class DeathRain extends JavaPlugin {
 
     }
 
-    public static DeathRain getPlugin(){
+    public static DeathRain getPlugin() {
         return plugin;
     }
 }

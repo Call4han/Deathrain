@@ -14,27 +14,25 @@ public class commandsdr implements TabExecutor {
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
         PluginDescriptionFile ord = DeathRain.getPlugin().getDescription();
-        String vers = ord.getVersion();
-        if (sender instanceof Player){
+        if (sender instanceof Player) {
             Player p = (Player) sender;
-            if (args.length==0){
-                p.sendMessage(ChatColor.GOLD+""+ ord.getDescription()   +    ord.getVersion()    +  ChatColor.DARK_BLUE+ " By Callahan ");
+            if (args.length == 0) {
+                p.sendMessage(ChatColor.GOLD + "" + ord.getDescription() + ord.getVersion() + ChatColor.DARK_BLUE + " By Callahan ");
                 p.sendMessage(ChatColor.GOLD + "Use /Deathrain reload for reload the config");
 
-            }else if (args.length==1){
-                if (p.hasPermission("deathrain.*")){
-                if (args[0].equalsIgnoreCase("reload")){
-                    DeathRain.getPlugin().reloadConfig();
-                    p.sendMessage(ChatColor.GREEN + "Plugin reloaded successfully");
-                }
-            }else {
+            } else if (args.length == 1) {
+                if (p.hasPermission("deathrain.*")) {
+                    if (args[0].equalsIgnoreCase("reload")) {
+                        DeathRain.getPlugin().reloadConfig();
+                        p.sendMessage(ChatColor.GREEN + "Plugin reloaded successfully");
+                    }
+                } else {
                     p.sendMessage(ChatColor.RED + "You are don´t permissions");
                 }
-            }else if(args.length>1){
+            } else if (args.length > 1) {
                 p.sendMessage(ChatColor.GOLD + ord.getDescription());
 
-            }
-            else if (args.length>2){
+            } else if (args.length > 2) {
                 p.sendMessage(ChatColor.GOLD + ord.getDescription());
             }
 
