@@ -7,3 +7,6 @@ a fairly simple storm counter with a few more features
  -  title message.
  -  ban message. 
  -  counter messages.
+### Commands
+- deathrain reload only
+- deathrain for see version and descripcion
