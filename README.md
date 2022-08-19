@@ -1,5 +1,7 @@
 # Deathrain
 a fairly simple storm counter with a few more features
+### Spigot
+- https://www.spigotmc.org/resources/deathrain-simple.104658/
 
 ### Features
  -  you can customize almost everything.
