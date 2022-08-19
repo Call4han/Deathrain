@@ -32,9 +32,9 @@ public class ThunderListener implements Listener {
         Player p = e.getEntity();
 
 
-        List<String> a = plugin.getConfig().getStringList("worlds");
+        List<String> world = plugin.getConfig().getStringList("worlds");
 
-        for (String worlds : a) {
+        for (String worlds : world) {
 
 
             World world1 = Bukkit.getWorld(worlds);
@@ -67,6 +67,7 @@ public class ThunderListener implements Listener {
                         p.getWorld().setStorm(true);
                         p.getWorld().setThundering(true);
                         p.getWorld().setThunderDuration(plugin.getConfig().getInt("storm-base-initial"));
+                        BukkitTask task1 = new taskDeathrain(DeathRain.getPlugin()).runTaskTimer(DeathRain.getPlugin(), 0L, 20L);
                         for (Player pa : Bukkit.getOnlinePlayers()) {
                             String message = plugin.getConfig().getString("storm-message-start");
                             message = message.replace("%player%", pa.getDisplayName());
@@ -109,9 +110,9 @@ public class ThunderListener implements Listener {
     }
 
     @EventHandler
-    public void xd(PlayerRespawnEvent e) {
+    public void PlayerRespawn(PlayerRespawnEvent e) {
         Player p = e.getPlayer();
-        String name = p.getDisplayName();
+
 
 
         List<String> a = plugin.getConfig().getStringList("worlds");
